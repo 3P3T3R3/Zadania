@@ -41,11 +41,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="form-group">
                 <label for="haslo">Hasło:</label>
-                <input type="haslo" id="haslo" name="haslo" required class="form-input">
+                <input type="password" id="haslo" name="haslo" required class="form-input">
             </div>
             <button type="submit" class="btn btn-primary">Zaloguj się</button>
         </form>
         <p>Nie masz konta? <a href="register.php">Zarejestruj się</a></p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

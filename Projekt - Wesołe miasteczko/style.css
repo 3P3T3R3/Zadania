@@ -479,3 +479,7 @@ body {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
+
+.ticket-details-card {
+    color: #2f3542;
+}

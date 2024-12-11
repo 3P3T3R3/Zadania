@@ -48,5 +48,6 @@ include 'header.php'; ?>
             </ul>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

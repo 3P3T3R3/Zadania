@@ -111,5 +111,6 @@ $featured_attractions = mysqli_query($conn, $query);
         </div>
     </section>
 </main>
+<script src="script.js"></script>
 
 <?php include 'footer.php'; ?>

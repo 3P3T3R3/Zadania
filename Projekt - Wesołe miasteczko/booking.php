@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="success-message">
                 <h2>Potwierdzenie zakupu</h2>
                 <p><?php echo $success; ?></p>
-                <div class="ticket-details card">
+                <div class="ticket-details-card">
                     <h3>Szczegóły biletu:</h3>
                     <p>Typ biletu: <?php echo $ticket_type; ?></p>
                     <p>Cena: <?php echo $price; ?> zł</p>
@@ -59,5 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         <?php endif; ?>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
