@@ -4,14 +4,14 @@ include 'header.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = sanitize_input($_POST['email']);
-    $password = $_POST['password'];
+    $haslo = $_POST['haslo'];
 
     $query = "SELECT * FROM klienci WHERE email = '$email'";
     $result = mysqli_query($conn, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
         $user = mysqli_fetch_assoc($result);
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($haslo, $user['haslo'])) {
             $_SESSION['user_id'] = $user['id_klienta'];
             $_SESSION['user_name'] = $user['imie'];
             header("Location: index.php");
@@ -40,8 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="email" id="email" name="email" required class="form-input">
             </div>
             <div class="form-group">
-                <label for="password">Hasło:</label>
-                <input type="password" id="password" name="password" required class="form-input">
+                <label for="haslo">Hasło:</label>
+                <input type="haslo" id="haslo" name="haslo" required class="form-input">
             </div>
             <button type="submit" class="btn btn-primary">Zaloguj się</button>
         </form>

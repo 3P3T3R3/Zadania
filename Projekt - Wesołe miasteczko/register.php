@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nazwisko = sanitize_input($_POST['nazwisko']);
     $email = sanitize_input($_POST['email']);
     $telefon = sanitize_input($_POST['telefon']);
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $haslo = password_hash($_POST['haslo'], PASSWORD_DEFAULT);
 
     $check_query = "SELECT * FROM klienci WHERE email = '$email'";
     $check_result = mysqli_query($conn, $check_query);
@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($check_result) > 0) {
         $error = "Ten email jest już zarejestrowany";
     } else {
-        $query = "INSERT INTO klienci (imie, nazwisko, email, telefon, password) 
-                 VALUES ('$imie', '$nazwisko', '$email', '$telefon', '$password')";
+        $query = "INSERT INTO klienci (imie, nazwisko, email, telefon, haslo) 
+                 VALUES ('$imie', '$nazwisko', '$email', '$telefon', '$haslo')";
         
         if (mysqli_query($conn, $query)) {
             header("Location: login.php");
@@ -58,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="tel" id="telefon" name="telefon" class="form-input">
             </div>
             <div class="form-group">
-                <label for="password">Hasło:</label>
-                <input type="password" id="password" name="password" required class="form-input">
+                <label for="haslo">Hasło:</label>
+                <input type="haslo" id="haslo" name="haslo" required class="form-input">
             </div>
             <button type="submit" class="btn btn-primary">Zarejestruj się</button>
         </form>

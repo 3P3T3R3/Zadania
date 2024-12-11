@@ -33,7 +33,7 @@ if ($filter_age > 0) {
         <div class="attractions-grid">
             <?php while($attraction = mysqli_fetch_assoc($result)): ?>
                 <div class="card attraction-card">
-                    <img src="images/attractions/<?php echo $attraction['id_atrakcji']; ?>.jpg" 
+                    <img src="images/attractions/<?php echo $attraction['id_atrakcji']; ?>.png" 
                          alt="<?php echo $attraction['nazwa']; ?>">
                     <h3><?php echo $attraction['nazwa']; ?></h3>
                     <p><?php echo $attraction['opis']; ?></p>
