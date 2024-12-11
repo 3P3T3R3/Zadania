@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `klienci` (
   `imie` varchar(50) NOT NULL,
   `nazwisko` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   `telefon` varchar(15) DEFAULT NULL,
   `data_rejestracji` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id_klienta`),
